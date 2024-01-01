@@ -1,0 +1,21 @@
+{
+    "name": "backgroundx",
+    "scripts": {
+        "start": "npm run build",
+        "build": "node build.js",
+        "prepare": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KatsuteDev/BackgroundX.git"
+    },
+    "author": "Katsute",
+    "license": "GPL-2.0",
+    "bugs": {
+        "url": "https://github.com/KatsuteDev/BackgroundX/issues"
+    },
+    "homepage": "https://github.com/KatsuteDev/BackgroundX#readme",
+    "devDependencies": {
+        "adm-zip": "0.5.10"
+    }
+}

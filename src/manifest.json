@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+
+    "name": "BackgroundX",
+    "author": "Katsute",
+    "description": "",
+    "version": "1.0",
+    "homepage_url": "https://github.com/KatsuteDev/BackgroundX",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+
+    "minimum_chrome_version": "105",
+    "browser_specific_settings": {
+        "gecko": {
+            "strict_min_version": "121.0"
+        }
+    },
+
+    "permissions": [],
+    "content_scripts": [{
+        "js": ["index.js"],
+        "css": ["style.css"],
+        "matches": [
+            "https://vscode.dev/*",
+            "https://*.github.dev/*"
+        ]
+    }]
+}
