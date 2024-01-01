@@ -1,14 +1,18 @@
 /* Copyright (C) 2024 Katsute <https://github.com/Katsute> */
 
-body[editorTransition="true"] .split-view-view > .editor-group-container::after,
-body[sidebarTransition="true"] .split-view-view > .part.sidebar::after,
-body[sidebarTransition="true"] .split-view-view > .part.auxiliarybar::after,
-body[panelTransition="true"] .split-view-view > .part.panel::after {
+body[bkx-wT="true"][bkx-wA="false"]::before,
+body[bkx-wT="true"][bkx-wA="true"] > div[role="application"] > div.monaco-grid-view::after,
+body[bkx-eT="true"] .split-view-view > .editor-group-container::after,
+body[bkx-sT="true"] .split-view-view > .part.sidebar::after,
+body[bkx-sT="true"] .split-view-view > .part.auxiliarybar::after,
+body[bkx-pT="true"] .split-view-view > .part.panel::after {
 
     opacity: 0;
 
 }
 
+body[bkx-wA="false"]::before,
+body[bkx-wA="true"] > div[role="application"] > div.monaco-grid-view::after,
 .split-view-view > .editor-group-container::after,
 .split-view-view > .part.sidebar::after,
 .split-view-view > .part.auxiliarybar::after,
@@ -26,5 +30,22 @@ body[panelTransition="true"] .split-view-view > .part.panel::after {
     pointer-events: none;
 
     transition: opacity 1s ease-in-out;
+
+}
+
+body[bkx-wA="false"]::before {
+
+    z-index: 1000;
+
+}
+
+body[bkx-iX="true"][bkx-wA="false"]::before,
+body[bkx-iX="true"][bkx-wA="true"] > div[role="application"] > div.monaco-grid-view::after,
+body[bkx-iX="true"] .split-view-view > .editor-group-container::after,
+body[bkx-iX="true"] .split-view-view > .part.sidebar::after,
+body[bkx-iX="true"] .split-view-view > .part.auxiliarybar::after,
+body[bkx-iX="true"] .split-view-view > .part.panel::after {
+
+    image-rendering: pixelated;
 
 }

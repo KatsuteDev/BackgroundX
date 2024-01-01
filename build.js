@@ -24,10 +24,16 @@ const ext  = path.join(__dirname, "extension.zip");
 }
 
 /* minify */ {
-    for(const file of ["style.css"])
+    for(const file of ["options.css", "options.js", "index.js", "style.css"])
         fs.writeFileSync(path.join(dist, file), fs.readFileSync(path.join(dist, file), "utf-8")
             .replace(/(?<!^)\/\*.*\*\//g, '') // /* comments (except first copyright)
             .replace(/ \/\/.*$/gm,'') // // comments
+            .replace(/ +/gm, ' ') // extra spaces
+            .replace(/^ +/gm, '') // leading space
+            .replace(/\r?\n/gm, '') // new line
+            .trim());
+    for(const file of ["options.html"])
+        fs.writeFileSync(path.join(dist, file), fs.readFileSync(path.join(dist, file), "utf-8")
             .replace(/ +/gm, ' ') // extra spaces
             .replace(/^ +/gm, '') // leading space
             .replace(/\r?\n/gm, '') // new line

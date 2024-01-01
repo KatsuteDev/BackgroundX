@@ -12,14 +12,15 @@
         "128": "icon128.png"
     },
 
-    "minimum_chrome_version": "105",
     "browser_specific_settings": {
         "gecko": {
-            "strict_min_version": "121.0"
         }
     },
 
-    "permissions": [],
+    "options_page": "options.html",
+    "permissions": [
+        "storage"
+    ],
     "content_scripts": [{
         "js": ["index.js"],
         "css": ["style.css"],
