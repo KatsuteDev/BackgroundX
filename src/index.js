@@ -12,7 +12,7 @@
         e.setAttribute("type", "text/css");
         if(css){
             e.appendChild(document.createTextNode(css));
-        }
+        };
         return e;
     };
 
@@ -24,21 +24,21 @@
 
     const options = await chrome.storage.sync.get("options");
 
-    const wA = options.windowAfter ?? false;
-    const iX = options.pixelRendering ?? true;
+    const wA = options.renderContentAboveBackground ?? false;
+    const si = options.smoothImageRendering ?? false;
 
     body.setAttribute(`${identifier}-wA`, wA);
-    body.setAttribute(`${identifier}-iX`, iX);
+    body.setAttribute(`${identifier}-si`, si);
 
-    const wT = options.w_timer ?? 0;
-    const eT = options.e_timer ?? 0;
-    const sT = options.s_timer ?? 0;
-    const pT = options.p_timer ?? 0;
+    const wT = options.windowTimer ?? 0;
+    const eT = options.editorTimer ?? 0;
+    const sT = options.sidebarTimer ?? 0;
+    const pT = options.panelTimer ?? 0;
 
-    const wI = [...(options.w_images ?? [])];
-    const eI = [...(options.e_images ?? [])];
-    const sI = [...(options.s_images ?? [])];
-    const pI = [...(options.p_images ?? [])];
+    const wI = [...(options.windowImages ?? [])];
+    const eI = [...(options.editorImages ?? [])];
+    const sI = [...(options.sidebarImages ?? [])];
+    const pI = [...(options.panelImages ?? [])];
 
     const wC = [...Array(wI.length).keys()];
     const eC = [...Array(eI.length).keys()];
@@ -62,10 +62,43 @@
     const global = createCSS(`${identifier}-global`);
 
     for(const [images, selectors, position, repeat, size , opacity, blur] of [
-        [wI, wS, options.w_position ?? "center center", options.w_repeat ?? "no-repeat", options.w_size ?? "cover", options.w_opacity ?? 0.9, options.w_blur ?? 0],
-        [eI, eS, options.e_position ?? "center center", options.e_repeat ?? "no-repeat", options.e_size ?? "cover", options.e_opacity ?? 0.9, options.e_blur ?? 0],
-        [sI, sS, options.s_position ?? "center center", options.s_repeat ?? "no-repeat", options.s_size ?? "cover", options.s_opacity ?? 0.9, options.s_blur ?? 0],
-        [pI, pS, options.p_position ?? "center center", options.p_repeat ?? "no-repeat", options.p_size ?? "cover", options.p_opacity ?? 0.9, options.p_blur ?? 0],
+        [
+            wI,
+            wS,
+            options.windowPosition ?? "center center",
+            options.windowRepeat ?? "no-repeat",
+            options.windowSize ?? "cover",
+            options.windowOpacity ?? 0.9,
+            options.windowBlur ?? 0
+        ],
+        [
+            eI,
+            eS,
+            options.editorPosition ??
+            "center center",
+            options.editorRepeat ?? "no-repeat",
+            options.editorSize ?? "cover",
+            options.editorOpacity ?? 0.9,
+            options.editorBlur ?? 0
+        ],
+        [
+            sI,
+            sS,
+            options.sidebarPosition ?? "center center",
+            options.sidebarRepeat ?? "no-repeat",
+            options.sidebarSize ?? "cover",
+            options.sidebarOpacity ?? 0.9,
+            options.sidebarBlur ?? 0
+        ],
+        [
+            pI,
+            pS,
+            options.panelPosition ?? "center center",
+            options.panelRepeat ?? "no-repeat",
+            options.panelSize ?? "cover",
+            options.panelOpacity ?? 0.9,
+            options.panelBlur ?? 0
+        ],
     ]){
         if(images.length > 0){
             global.appendChild(document.createTextNode(`
@@ -109,7 +142,7 @@
                 }
             `));
         }
-    }
+    };
 
     const wIE = createCSS(`${identifier}-w`);
     const eIE = createCSS(`${identifier}-e`);

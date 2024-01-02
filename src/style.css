@@ -39,12 +39,12 @@ body[bkx-wA="false"]::before {
 
 }
 
-body[bkx-iX="true"][bkx-wA="false"]::before,
-body[bkx-iX="true"][bkx-wA="true"] > div[role="application"] > div.monaco-grid-view::after,
-body[bkx-iX="true"] .split-view-view > .editor-group-container::after,
-body[bkx-iX="true"] .split-view-view > .part.sidebar::after,
-body[bkx-iX="true"] .split-view-view > .part.auxiliarybar::after,
-body[bkx-iX="true"] .split-view-view > .part.panel::after {
+body[bkx-si="true"][bkx-wA="false"]::before,
+body[bkx-si="true"][bkx-wA="true"] > div[role="application"] > div.monaco-grid-view::after,
+body[bkx-si="true"] .split-view-view > .editor-group-container::after,
+body[bkx-si="true"] .split-view-view > .part.sidebar::after,
+body[bkx-si="true"] .split-view-view > .part.auxiliarybar::after,
+body[bkx-si="true"] .split-view-view > .part.panel::after {
 
     image-rendering: pixelated;
 

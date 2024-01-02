@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
     <!--
-    Copyright (C) 2024 Katsute <https://github.com/Katsute> */
+    Copyright (C) 2024 Katsute <https://github.com/Katsute>
     -->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Background</title>
+
+        <link rel="stylesheet" src="./style.css">
     </head>
     <body>
+        <section id="bkx-w">
+            <select id="bkx-wPositon">
+                <option value="top_left">Top Left</option>
+                <option value="top_center">Top Center</option>
+                <option value="top_right">Top Right</option>
+                <option value="center_left">Center Left</option>
+                <option value="center_center">Center Center</option>
+                <option value="center_right">Center Right</option>
+                <option value="bottom_left">Bottom Left</option>
+                <option value="bottom_center">Bottom Center</option>
+                <option value="bottom_right">Bottom Right</option>
+                <option value="custom">Custom</option>
+            </select>
+            <input id="bkx-wPositionManual" type="text">
+            <select id="bkx-wRepeat">
+                <option value="no_repeat">No Repeat</option>
+                <option value="repeat">Repeat</option>
+                <option value="repeat_x">Repeat X</option>
+                <option value="repeat_y">Repeat Y</option>
+                <option value="repeat_space">Repeat Space</option>
+                <option value="repeat_round">Repeat Round</option>
+            </select>
+            <select id="bkx-wSize">
+                <option value="auto">Auto</option>
+                <option value="contain">Contain</option>
+                <option value="cover">Cover</option>
+                <option value="custom">Custom</option>
+            </select>
+            <input id="bkx-wSizeManual" type="text">
+            <input id="bkx-wOpacity" type="number" min="0" max="1" step=".01">
+            <input id="bkx-wBlur" type="text">
+            <input id="bkx-wTime" type="number" min="0" step=".01">
+        </section>
+        <section id="bkx-o">
+            <input id="bkx-wA" type="checkbox">
+            <input id="bkx-si" type="checkbox">
+        </section>
+        <section id="bkx-c">
+            <textarea id="bkx-css"></textarea>
+        </section>
+        <section id="bkx-b">
+            <button id="bkx-import">Import</button>
+            <button id="bkx-export">Export</button>
+        </section>
 
+        <script defer src="./options.js"></script>
     </body>
 </html>
