@@ -33,7 +33,7 @@
     for(const input of $$(["input", "select", "textarea"])){
         input.addEventListener("change", () => {
             save({
-                // TODO
+                // TODO: save setting from HTML
             });
         });
     };
@@ -48,11 +48,15 @@
     // import & export
 
     $("#${identifier}-import").addEventListener("click", () => {
+        // TODO: import from json
 
+        // TODO: dump invalid properties
+
+        // TODO: handle invalid types
     });
 
     $("#${identifier}-export").addEventListener("click", () => {
-
+        // TODO: export to json from HTML
     });
 
     // init
