@@ -1,1 +1,228 @@
 /* Copyright (C) 2024 Katsute <https://github.com/Katsute> */
+
+* {
+
+    font-family: "Open Sans", Helvetica, Arial, sans-serif, "Segoe UI Emoji";
+
+    user-select: none;
+
+    box-sizing: border-box;
+
+}
+
+*::-webkit-scrollbar {
+
+    height: 8px;
+    width: 8px;
+
+}
+
+*::-webkit-scrollbar-track {
+
+    background: #202020;
+
+}
+
+*::-webkit-scrollbar-thumb {
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+
+}
+
+*::-webkit-scrollbar-thumb:hover {
+
+    background: rgba(255, 255, 255, 0.35);
+
+}
+
+@media not screen and (width: 400px) {
+
+    html {
+
+        min-width: 500px;
+
+    }
+
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+a[href], a[href]:visited, a[href]:hover {
+
+    color: #0098FF;
+    text-decoration: none;
+
+    border-bottom: 1px solid transparent;
+
+    transition: border ease-in-out .15s;
+
+}
+
+a[href]:hover {
+
+    border-color: #0098FF;
+
+}
+
+a[href^="https://developer.mozilla.org/"] {
+
+    font-style: italic;
+    font-size: small;
+
+    font-family: Consolas, 'Courier New', Courier, monospace, "Segoe UI Emoji";
+
+}
+
+body > section {
+
+    display: flex;
+    flex-direction: column;
+
+    border-left: .35rem solid #0098FF;
+
+}
+
+h1 {
+
+    margin: 0;
+    padding: .25rem;
+
+    color: white;
+    background-color: #0098FF;
+
+}
+
+h2 {
+
+    margin: 0 0 .5rem 0;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+
+p {
+
+    margin: 0;
+
+}
+
+ul {
+
+    list-style: none;
+
+    margin: 0;
+    padding: .5rem;
+
+}
+
+li {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+li:not(:last-child) {
+
+    margin-bottom: .5rem;
+
+}
+
+li > *:not(:last-child) {
+
+    margin-bottom: .5rem;
+
+}
+
+input, select, textarea, button {
+
+    padding: .25rem;
+
+    border-radius: .25rem;
+
+}
+
+input, select, textarea, input:focus, select:focus, textarea:focus, button {
+
+    border: 1px solid gray;
+    outline: none;
+
+}
+
+input[type="checkbox"] {
+
+    transform: scale(1.25);
+
+}
+
+input[type="checkbox"]:hover, button:hover {
+
+    cursor: pointer;
+
+}
+
+input[disabled]:hover {
+
+    cursor: not-allowed;
+
+}
+
+button {
+
+    transition: background-color ease-in-out .15s;
+    background-color: white;
+
+}
+
+button:hover {
+
+    background-color: lightgray;
+
+}
+
+textarea {
+
+    resize: vertical;
+    min-height: 6rem;
+
+}
+
+input[type="text"], textarea {
+
+    font-family: Consolas, 'Courier New', Courier, monospace, "Segoe UI Emoji";
+
+}
+
+#bkx-o li.row {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+#bkx-o li > * {
+
+    margin-bottom: 0;
+
+}
+
+#bkx-o p {
+
+    font-weight: 500;
+    margin-right: .5rem;
+
+}
+
+#bkx-import-container, #bkx-export-container {
+
+    display: none;
+
+}
