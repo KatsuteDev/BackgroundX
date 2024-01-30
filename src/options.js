@@ -136,7 +136,7 @@
 
             save(options);
         };
-    }
+    };
 
     for(const input of document.querySelectorAll(["input", "select", "textarea"])){
         input.addEventListener("change", saveOptions);
