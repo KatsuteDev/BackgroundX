@@ -194,9 +194,47 @@ textarea {
 
 }
 
-input[type="text"], textarea {
+input[id$="Manual"][type="text"], input[id$="Blur"][type="text"], textarea {
 
     font-family: Consolas, 'Courier New', Courier, monospace, "Segoe UI Emoji";
+
+}
+
+ul[id$="Backgrounds"] {
+
+    padding: 0;
+
+}
+
+ul[id$="Backgrounds"] li {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+ul[id$="Backgrounds"] li input {
+
+    flex-grow: 1;
+
+    margin-bottom: 0;
+
+}
+
+ul[id$="Backgrounds"] li button {
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    padding: 0 .5rem;
+
+    margin: 0 0 0 .5rem;
+
+}
+
+ul[id$="Backgrounds"] li:last-child button {
+
+    display: none;
 
 }
 

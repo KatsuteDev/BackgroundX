@@ -3,7 +3,7 @@
 
     "name": "BackgroundX",
     "author": "Katsute",
-    "description": "",
+    "description": "Background image extension for VSCode web and GitHub Codespaces",
     "version": "1.0",
     "homepage_url": "https://github.com/KatsuteDev/BackgroundX",
     "icons": {

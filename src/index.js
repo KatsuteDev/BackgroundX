@@ -22,7 +22,7 @@
 
     const body = document.querySelector("body");
 
-    const options = await chrome.storage.sync.get("options");
+    const options = await (chrome ?? browser).storage.sync.get("options");
 
     const wA = options.renderContentAboveBackground ?? false;
     const si = options.smoothImageRendering ?? false;
@@ -35,10 +35,10 @@
     const sT = options.sidebarTimer ?? 0;
     const pT = options.panelTimer ?? 0;
 
-    const wI = [...(options.windowImages ?? [])];
-    const eI = [...(options.editorImages ?? [])];
-    const sI = [...(options.sidebarImages ?? [])];
-    const pI = [...(options.panelImages ?? [])];
+    const wI = [...(options.windowBackgrounds ?? [])];
+    const eI = [...(options.editorBackgrounds ?? [])];
+    const sI = [...(options.sidebarBackgrounds ?? [])];
+    const pI = [...(options.panelBackgrounds ?? [])];
 
     const wC = [...Array(wI.length).keys()];
     const eC = [...Array(eI.length).keys()];
@@ -74,8 +74,7 @@
         [
             eI,
             eS,
-            options.editorPosition ??
-            "center center",
+            options.editorPosition ?? "center center",
             options.editorRepeat ?? "no-repeat",
             options.editorSize ?? "cover",
             options.editorOpacity ?? 0.9,

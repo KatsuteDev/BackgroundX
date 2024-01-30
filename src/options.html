@@ -5,26 +5,26 @@
     -->
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initialscale=1">
 
         <title>Background</title>
 
         <link rel="stylesheet" href="./options.css">
     </head>
     <body>
-        <section id="bkx-w">
+        <section id="bkx-window">
             <h1>Window</h1>
             <ul>
                 <li>
-                    <h2>Images</h2>
-                    <div id="bkx-wImage"></div>
+                    <h2>Backgrounds</h2>
+                    <ul id="bkx-windowBackgrounds"></ul>
                 </li>
                 <li>
                     <h2>
                         Position
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background-position</a>
                     </h2>
-                    <select id="bkx-wPosition">
+                    <select id="bkx-windowPosition">
                         <option value="top_left">Top Left</option>
                         <option value="top_center">Top Center</option>
                         <option value="top_right">Top Right</option>
@@ -36,14 +36,14 @@
                         <option value="bottom_right">Bottom Right</option>
                         <option value="custom">Custom</option>
                     </select>
-                    <input id="bkx-wPositionManual" type="text">
+                    <input id="bkx-windowPositionManual" type="text">
                 </li>
                 <li>
                     <h2>
                         Repeat
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat">background-repeat</a>
                     </h2>
-                    <select id="bkx-wRepeat">
+                    <select id="bkx-windowRepeat">
                         <option value="no_repeat">No Repeat</option>
                         <option value="repeat">Repeat</option>
                         <option value="repeat_x">Repeat X</option>
@@ -57,48 +57,48 @@
                         Size
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a>
                     </h2>
-                    <select id="bkx-wSize">
+                    <select id="bkx-windowSize">
                         <option value="auto">Auto</option>
                         <option value="contain">Contain</option>
                         <option value="cover">Cover</option>
                         <option value="custom">Custom</option>
                     </select>
-                    <input id="bkx-wSizeManual" type="text" spellcheck="false">
+                    <input id="bkx-windowSizeManual" type="text" spellcheck="false">
                 </li>
                 <li>
                     <h2>
                         Opacity
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">opacity</a>
                     </h2>
-                    <input id="bkx-wOpacity" type="number" min="0" max="1" step=".01">
+                    <input id="bkx-windowOpacity" type="number" min="0" max="1" step=".01">
                 </li>
                 <li>
                     <h2>
                         Blur
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur">blur</a>
                     </h2>
-                    <input id="bkx-wBlur" type="text" spellcheck="false">
+                    <input id="bkx-windowBlur" type="text" spellcheck="false">
                 </li>
                 <li>
                     <h2>Time</h2>
                     <p>Delay between background changes in seconds, set to 0 to never change the background</p>
-                    <input id="bkx-wTime" type="number" min="0" step=".01">
+                    <input id="bkx-windowTime" type="number" min="0" step=".01">
                 </li>
             </ul>
         </section>
-        <section id="bkx-e">
+        <section id="bkx-editor">
             <h1>Editor</h1>
             <ul>
                 <li>
-                    <h2>Images</h2>
-                    <div id="bkx-eImage"></div>
+                    <h2>Backgrounds</h2>
+                    <ul id="bkx-editorBackgrounds"></ul>
                 </li>
                 <li>
                     <h2>
                         Position
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background-position</a>
                     </h2>
-                    <select id="bkx-ePosition">
+                    <select id="bkx-editorPosition">
                         <option value="top_left">Top Left</option>
                         <option value="top_center">Top Center</option>
                         <option value="top_right">Top Right</option>
@@ -110,14 +110,14 @@
                         <option value="bottom_right">Bottom Right</option>
                         <option value="custom">Custom</option>
                     </select>
-                    <input id="bkx-ePositionManual" type="text">
+                    <input id="bkx-editorPositionManual" type="text">
                 </li>
                 <li>
                     <h2>
                         Repeat
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat">background-repeat</a>
                     </h2>
-                    <select id="bkx-eRepeat">
+                    <select id="bkx-editorRepeat">
                         <option value="no_repeat">No Repeat</option>
                         <option value="repeat">Repeat</option>
                         <option value="repeat_x">Repeat X</option>
@@ -131,48 +131,48 @@
                         Size
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a>
                     </h2>
-                    <select id="bkx-eSize">
+                    <select id="bkx-editorSize">
                         <option value="auto">Auto</option>
                         <option value="contain">Contain</option>
                         <option value="cover">Cover</option>
                         <option value="custom">Custom</option>
                     </select>
-                    <input id="bkx-eSizeManual" type="text" spellcheck="false">
+                    <input id="bkx-editorSizeManual" type="text" spellcheck="false">
                 </li>
                 <li>
                     <h2>
                         Opacity
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">opacity</a>
                     </h2>
-                    <input id="bkx-eOpacity" type="number" min="0" max="1" step=".01">
+                    <input id="bkx-editorOpacity" type="number" min="0" max="1" step=".01">
                 </li>
                 <li>
                     <h2>
                         Blur
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur">blur</a>
                     </h2>
-                    <input id="bkx-eBlur" type="text" spellcheck="false">
+                    <input id="bkx-editorBlur" type="text" spellcheck="false">
                 </li>
                 <li>
                     <h2>Time</h2>
                     <p>Delay between background changes in seconds, set to 0 to never change the background</p>
-                    <input id="bkx-eTime" type="number" min="0" step=".01">
+                    <input id="bkx-editorTime" type="number" min="0" step=".01">
                 </li>
             </ul>
         </section>
-        <section id="bkx-s">
+        <section id="bkx-sidebar">
             <h1>Sidebar</h1>
             <ul>
                 <li>
-                    <h2>Images</h2>
-                    <div id="bkx-sImage"></div>
+                    <h2>Backgrounds</h2>
+                    <ul id="bkx-sidebarBackgrounds"></ul>
                 </li>
                 <li>
                     <h2>
                         Position
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background-position</a>
                     </h2>
-                    <select id="bkx-sPosition">
+                    <select id="bkx-sidebarPosition">
                         <option value="top_left">Top Left</option>
                         <option value="top_center">Top Center</option>
                         <option value="top_right">Top Right</option>
@@ -184,14 +184,14 @@
                         <option value="bottom_right">Bottom Right</option>
                         <option value="custom">Custom</option>
                     </select>
-                    <input id="bkx-sPositionManual" type="text">
+                    <input id="bkx-sidebarPositionManual" type="text">
                 </li>
                 <li>
                     <h2>
                         Repeat
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat">background-repeat</a>
                     </h2>
-                    <select id="bkx-sRepeat">
+                    <select id="bkx-sidebarRepeat">
                         <option value="no_repeat">No Repeat</option>
                         <option value="repeat">Repeat</option>
                         <option value="repeat_x">Repeat X</option>
@@ -205,48 +205,48 @@
                         Size
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a>
                     </h2>
-                    <select id="bkx-sSize">
+                    <select id="bkx-sidebarSize">
                         <option value="auto">Auto</option>
                         <option value="contain">Contain</option>
                         <option value="cover">Cover</option>
                         <option value="custom">Custom</option>
                     </select>
-                    <input id="bkx-sSizeManual" type="text" spellcheck="false">
+                    <input id="bkx-sidebarSizeManual" type="text" spellcheck="false">
                 </li>
                 <li>
                     <h2>
                         Opacity
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">opacity</a>
                     </h2>
-                    <input id="bkx-sOpacity" type="number" min="0" max="1" step=".01">
+                    <input id="bkx-sidebarOpacity" type="number" min="0" max="1" step=".01">
                 </li>
                 <li>
                     <h2>
                         Blur
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur">blur</a>
                     </h2>
-                    <input id="bkx-sBlur" type="text" spellcheck="false">
+                    <input id="bkx-sidebarBlur" type="text" spellcheck="false">
                 </li>
                 <li>
                     <h2>Time</h2>
                     <p>Delay between background changes in seconds, set to 0 to never change the background</p>
-                    <input id="bkx-sTime" type="number" min="0" step=".01">
+                    <input id="bkx-sidebarTime" type="number" min="0" step=".01">
                 </li>
             </ul>
         </section>
-        <section id="bkx-p">
+        <section id="bkx-panel">
             <h1>Panel</h1>
             <ul>
                 <li>
-                    <h2>Images</h2>
-                    <div id="bkx-pImage"></div>
+                    <h2>Backgrounds</h2>
+                    <ul id="bkx-panelBackgrounds"></ul>
                 </li>
                 <li>
                     <h2>
                         Position
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background-position</a>
                     </h2>
-                    <select id="bkx-pPosition">
+                    <select id="bkx-panelPosition">
                         <option value="top_left">Top Left</option>
                         <option value="top_center">Top Center</option>
                         <option value="top_right">Top Right</option>
@@ -258,14 +258,14 @@
                         <option value="bottom_right">Bottom Right</option>
                         <option value="custom">Custom</option>
                     </select>
-                    <input id="bkx-pPositionManual" type="text">
+                    <input id="bkx-panelPositionManual" type="text">
                 </li>
                 <li>
                     <h2>
                         Repeat
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat">background-repeat</a>
                     </h2>
-                    <select id="bkx-pRepeat">
+                    <select id="bkx-panelRepeat">
                         <option value="no_repeat">No Repeat</option>
                         <option value="repeat">Repeat</option>
                         <option value="repeat_x">Repeat X</option>
@@ -279,32 +279,32 @@
                         Size
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a>
                     </h2>
-                    <select id="bkx-pSize">
+                    <select id="bkx-panelSize">
                         <option value="auto">Auto</option>
                         <option value="contain">Contain</option>
                         <option value="cover">Cover</option>
                         <option value="custom">Custom</option>
                     </select>
-                    <input id="bkx-pSizeManual" type="text" spellcheck="false">
+                    <input id="bkx-panelSizeManual" type="text" spellcheck="false">
                 </li>
                 <li>
                     <h2>
                         Opacity
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">opacity</a>
                     </h2>
-                    <input id="bkx-pOpacity" type="number" min="0" max="1" step=".01">
+                    <input id="bkx-panelOpacity" type="number" min="0" max="1" step=".01">
                 </li>
                 <li>
                     <h2>
                         Blur
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur">blur</a>
                     </h2>
-                    <input id="bkx-pBlur" type="text" spellcheck="false">
+                    <input id="bkx-panelBlur" type="text" spellcheck="false">
                 </li>
                 <li>
                     <h2>Time</h2>
                     <p>Delay between background changes in seconds, set to 0 to never change the background</p>
-                    <input id="bkx-pTime" type="number" min="0" step=".01">
+                    <input id="bkx-panelTime" type="number" min="0" step=".01">
                 </li>
             </ul>
         </section>
