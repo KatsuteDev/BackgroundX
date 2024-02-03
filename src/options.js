@@ -65,9 +65,9 @@
                 add('');
 
                 const defaults = {
-                    "Position": "center_center",
+                    "Position": "center center",
                     "PositionManual": "50%",
-                    "Repeat": "no_repeat",
+                    "Repeat": "no-repeat",
                     "Size": "auto",
                     "SizeManual": "100%",
                     "Opacity": "0.9",
