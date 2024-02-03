@@ -8,31 +8,31 @@
 
     box-sizing: border-box;
 
-}
+    &::-webkit-scrollbar {
 
-*::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
 
-    height: 8px;
-    width: 8px;
+    }
 
-}
+    &::-webkit-scrollbar-track {
 
-*::-webkit-scrollbar-track {
+        background: #202020;
 
-    background: #202020;
+    }
 
-}
+    &::-webkit-scrollbar-thumb {
 
-*::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
 
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    }
 
-}
+    &::-webkit-scrollbar-thumb:hover {
 
-*::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.35);
 
-    background: rgba(255, 255, 255, 0.35);
+    }
 
 }
 
@@ -51,22 +51,35 @@ body {
     margin: 0;
     padding: 0;
 
-}
+    & > section {
 
-a[href], a[href]:visited, a[href]:hover {
+        display: flex;
+        flex-direction: column;
 
-    color: #0098FF;
-    text-decoration: none;
+        border-left: .35rem solid #0098FF;
 
-    border-bottom: 1px solid transparent;
-
-    transition: border ease-in-out .15s;
+    }
 
 }
 
-a[href]:hover {
+a[href] {
 
-    border-color: #0098FF;
+    &, &:visited, &:hover {
+
+        color: #0098FF;
+        text-decoration: none;
+
+        border-bottom: 1px solid transparent;
+
+        transition: border ease-in-out .15s;
+
+    }
+
+    &:hover {
+
+        border-color: #0098FF;
+
+    }
 
 }
 
@@ -76,15 +89,6 @@ a[href^="https://developer.mozilla.org/"] {
     font-size: small;
 
     font-family: Consolas, 'Courier New', Courier, monospace, "Segoe UI Emoji";
-
-}
-
-body > section {
-
-    display: flex;
-    flex-direction: column;
-
-    border-left: .35rem solid #0098FF;
 
 }
 
@@ -127,17 +131,17 @@ li {
     display: flex;
     flex-direction: column;
 
-}
+    &:not(:last-child) {
 
-li:not(:last-child) {
+        margin-bottom: .5rem;
 
-    margin-bottom: .5rem;
+    }
 
-}
+    & > *:not(:last-child) {
 
-li > *:not(:last-child) {
+        margin-bottom: .5rem;
 
-    margin-bottom: .5rem;
+    }
 
 }
 
@@ -155,6 +159,7 @@ input, select, textarea, input:focus, select:focus, textarea:focus, button {
     outline: none;
 
 }
+
 
 input[type="checkbox"] {
 
@@ -174,16 +179,9 @@ input[disabled]:hover {
 
 }
 
-button {
+input[id$="Manual"][type="text"], input[id$="Blur"][type="text"], textarea {
 
-    transition: background-color ease-in-out .15s;
-    background-color: white;
-
-}
-
-button:hover {
-
-    background-color: lightgray;
+    font-family: Consolas, 'Courier New', Courier, monospace, "Segoe UI Emoji";
 
 }
 
@@ -194,9 +192,16 @@ textarea {
 
 }
 
-input[id$="Manual"][type="text"], input[id$="Blur"][type="text"], textarea {
+button {
 
-    font-family: Consolas, 'Courier New', Courier, monospace, "Segoe UI Emoji";
+    transition: background-color ease-in-out .15s;
+    background-color: white;
+
+    &:hover {
+
+        background-color: lightgray;
+
+    }
 
 }
 
@@ -204,58 +209,62 @@ ul[id$="Backgrounds"] {
 
     padding: 0;
 
-}
+    & li {
 
-ul[id$="Backgrounds"] li {
+        display: flex;
+        flex-direction: row;
 
-    display: flex;
-    flex-direction: row;
+        & input {
 
-}
+            flex-grow: 1;
 
-ul[id$="Backgrounds"] li input {
+            margin-bottom: 0;
 
-    flex-grow: 1;
+        }
 
-    margin-bottom: 0;
+        & button {
 
-}
+            font-size: 1rem;
+            font-weight: bold;
 
-ul[id$="Backgrounds"] li button {
+            padding: 0 .5rem;
 
-    font-size: 1rem;
-    font-weight: bold;
+            margin: 0 0 0 .5rem;
 
-    padding: 0 .5rem;
+        }
 
-    margin: 0 0 0 .5rem;
+        &:last-child button {
 
-}
+            display: none;
 
-ul[id$="Backgrounds"] li:last-child button {
+        }
 
-    display: none;
-
-}
-
-#bkx-o li.row {
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    }
 
 }
 
-#bkx-o li > * {
+#bkx-o {
 
-    margin-bottom: 0;
+    & li.row {
 
-}
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-#bkx-o p {
+    }
 
-    font-weight: 500;
-    margin-right: .5rem;
+    & li > * {
+
+        margin-bottom: 0;
+
+    }
+
+    & p {
+
+        font-weight: 500;
+        margin-right: .5rem;
+
+    }
 
 }
 

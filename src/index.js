@@ -22,7 +22,11 @@
 
     const body = document.querySelector("body");
 
-    const options = await (chrome ?? browser).storage.sync.get("options");
+    const options = await (chrome ?? browser).storage.sync.get() ?? {};
+
+    console.groupCollapsed("Loading options");
+    console.info(JSON.stringify(options, null, 4));
+    console.groupEnd();
 
     const wA = options.renderContentAboveBackground ?? false;
     const si = options.smoothImageRendering ?? false;
