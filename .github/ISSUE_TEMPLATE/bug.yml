@@ -33,6 +33,15 @@ body:
       required: true
 
   - type: textarea
+    id: settings
+    attributes:
+      label: Settings
+      description: |
+        Extension settings.
+
+        Make sure to remove any sensitive information.
+
+  - type: textarea
     attributes:
       label: Issue
       description: |

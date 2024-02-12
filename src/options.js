@@ -177,6 +177,10 @@
         reset().then(() => load({}));
     });
 
+    document.querySelector(`#${identifier}-report`).addEventListener("click", () => {
+        window.open(`https://github.com/KatsuteDev/BackgroundX/issues/new?template=bug.yml?settings=${encodeURI("```json\n" + JSON.stringify(await (chrome ?? browser).storage.sync.get() ?? {}, null, 4) + "\n```")}`);
+    });
+
     load(await (chrome ?? browser).storage.sync.get() ?? {});
 
     console.info("Finished init");
