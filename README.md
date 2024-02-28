@@ -3,13 +3,15 @@
         <img src="https://raw.githubusercontent.com/KatsuteDev/BackgroundX/main/assets/icon.png" width=100>
     </a>
     <h3>BackgroundX</h3>
-    <p>TBA</p>
+    <p>Background image extension for VSCode web and GitHub Codespaces</p>
     <div>
         <a href="https://github.com/KatsuteDev/BackgroundX/issues">Report an Issue</a>
         •
         <a href="https://chrome.google.com/webstore/detail/ [[ ?? ]]">Chrome Extension</a>
+        <!--
         •
         <a href="https://addons.mozilla.org/firefox/addon/ [[ ?? ]]">Mozilla Add-on</a>
+        -->
     <br><br>
         <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons License"></a>
     <br><br>
