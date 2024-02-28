@@ -1,4 +1,20 @@
-/* Copyright (C) 2024 Katsute <https://github.com/Katsute> */
+/*
+ * Copyright (C) 2024 Katsute <https://github.com/Katsute>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
 
 (async () => {
 
@@ -28,21 +44,21 @@
     console.info(JSON.stringify(options, null, 4));
     console.groupEnd();
 
-    const wA = options.renderContentAboveBackground ?? false;
-    const si = options.smoothImageRendering ?? false;
+    const wA = options.renderContentAboveBackground || false;
+    const si = options.smoothImageRendering || false;
 
     body.setAttribute(`${identifier}-wA`, wA);
     body.setAttribute(`${identifier}-si`, si);
 
-    const wT = options.windowTimer ?? 0;
-    const eT = options.editorTimer ?? 0;
-    const sT = options.sidebarTimer ?? 0;
-    const pT = options.panelTimer ?? 0;
+    const wT = options.windowTimer || 0;
+    const eT = options.editorTimer || 0;
+    const sT = options.sidebarTimer || 0;
+    const pT = options.panelTimer || 0;
 
-    const wI = [...(options.windowBackgrounds ?? [])];
-    const eI = [...(options.editorBackgrounds ?? [])];
-    const sI = [...(options.sidebarBackgrounds ?? [])];
-    const pI = [...(options.panelBackgrounds ?? [])];
+    const wI = [...(options.windowBackgrounds || [])];
+    const eI = [...(options.editorBackgrounds || [])];
+    const sI = [...(options.sidebarBackgrounds || [])];
+    const pI = [...(options.panelBackgrounds || [])];
 
     const wC = [...Array(wI.length).keys()];
     const eC = [...Array(eI.length).keys()];
@@ -65,42 +81,42 @@
 
     const global = createCSS(`${identifier}-global`);
 
-    for(const [images, selectors, position, repeat, size , opacity, blur] of [
+    for(const [images, selectors, position, repeat, size, opacity, blur] of [
         [
             wI,
             wS,
-            options.windowPosition ?? "center center",
-            options.windowRepeat ?? "no-repeat",
-            options.windowSize ?? "cover",
-            options.windowOpacity ?? 0.9,
-            options.windowBlur ?? 0
+            options.windowPosition || "center center",
+            options.windowRepeat || "no-repeat",
+            options.windowSize || "cover",
+            options.windowOpacity || 0.9,
+            options.windowBlur || 0
         ],
         [
             eI,
             eS,
-            options.editorPosition ?? "center center",
-            options.editorRepeat ?? "no-repeat",
-            options.editorSize ?? "cover",
-            options.editorOpacity ?? 0.9,
-            options.editorBlur ?? 0
+            options.editorPosition || "center center",
+            options.editorRepeat || "no-repeat",
+            options.editorSize || "cover",
+            options.editorOpacity || 0.9,
+            options.editorBlur || 0
         ],
         [
             sI,
             sS,
-            options.sidebarPosition ?? "center center",
-            options.sidebarRepeat ?? "no-repeat",
-            options.sidebarSize ?? "cover",
-            options.sidebarOpacity ?? 0.9,
-            options.sidebarBlur ?? 0
+            options.sidebarPosition || "center center",
+            options.sidebarRepeat || "no-repeat",
+            options.sidebarSize || "cover",
+            options.sidebarOpacity || 0.9,
+            options.sidebarBlur || 0
         ],
         [
             pI,
             pS,
-            options.panelPosition ?? "center center",
-            options.panelRepeat ?? "no-repeat",
-            options.panelSize ?? "cover",
-            options.panelOpacity ?? 0.9,
-            options.panelBlur ?? 0
+            options.panelPosition || "center center",
+            options.panelRepeat || "no-repeat",
+            options.panelSize || "cover",
+            options.panelOpacity || 0.9,
+            options.panelBlur || 0
         ],
     ]){
         if(images.length > 0){
@@ -111,7 +127,7 @@
                     background-repeat: ${repeat};
                     background-size: ${size};
 
-                    opacity: ${round(opacity, 2)};
+                    opacity: ${round(1 - parseFloat(opacity), 2)};
 
                     filter: blur(${blur});
 

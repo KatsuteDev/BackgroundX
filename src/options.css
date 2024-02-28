@@ -222,6 +222,25 @@ ul[id$="Backgrounds"] {
 
         }
 
+        img.thumbnail {
+
+            display: none;
+
+        }
+
+        input:hover ~ img.thumbnail {
+
+            display: block;
+
+            position: absolute;
+
+            margin-top: 2rem;
+
+            max-width: 7rem;
+            max-height: 5rem;
+
+        }
+
         & button {
 
             font-size: 1rem;
