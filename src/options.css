@@ -160,7 +160,6 @@ input, select, textarea, input:focus, select:focus, textarea:focus, button {
 
 }
 
-
 input[type="checkbox"] {
 
     transform: scale(1.25);
