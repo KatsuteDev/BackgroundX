@@ -43,7 +43,6 @@
                     input.setAttribute("placeholder", "Background image URL");
                     input.value = url;
                     input.addEventListener("change", () => {
-                        image.src = input.value;
                         saveOptions();
                     });
                     input.addEventListener("focusout", () => {
@@ -52,6 +51,7 @@
                         };
                     });
                     input.addEventListener("keyup", () => {
+                        image.src = input.value;
                         if(container.lastChild === row && input.value.trim().length > 0){
                             add('');
                         };
@@ -60,6 +60,8 @@
                     const image = document.createElement("img");
                     image.classList = "thumbnail";
                     image.src = url;
+                    image.onload = () => image.setAttribute("err", false);
+                    image.onerror = () => image.setAttribute("err", true);
 
                     const remove = document.createElement("button");
                     remove.textContent = '×';

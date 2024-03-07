@@ -225,18 +225,18 @@ ul[id$="Backgrounds"] {
 
             display: none;
 
-        }
-
-        input:hover ~ img.thumbnail {
-
-            display: block;
-
             position: absolute;
 
             margin-top: 2rem;
 
             max-width: 7rem;
             max-height: 5rem;
+
+        }
+
+        input:hover ~ img.thumbnail:not([err=true]) {
+
+            display: block;
 
         }
 
