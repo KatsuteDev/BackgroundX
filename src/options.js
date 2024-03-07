@@ -197,10 +197,6 @@
         container.click();
     });
 
-    document.querySelector(`#${identifier}-reset`).addEventListener("click", () => {
-        reset().then(() => load({}));
-    });
-
     document.querySelector(`#${identifier}-report`).addEventListener("click", async () => {
         window.open(`https://github.com/KatsuteDev/BackgroundX/issues/new?template=bug.yml&settings=${encodeURI("```json\n" + JSON.stringify(await (chrome ?? browser).storage.sync.get() ?? {}, null, 4) + "\n```")}`);
     });
