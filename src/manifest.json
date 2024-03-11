@@ -33,6 +33,9 @@
         "matches": [
             "https://vscode.dev/*",
             "https://*.github.dev/*"
+        ],
+        "exclude_matches": [
+            "https://*.app.github.dev/*"
         ]
     }]
 }
