@@ -17,6 +17,8 @@ body:
 
         **This extension does not support loading local background images; browsers do not allow this.**
 
+        **This extension does not support converting local background images to base64; extension settings do not have enough space to store this.**
+
   - type: textarea
     id: feature
     attributes:
