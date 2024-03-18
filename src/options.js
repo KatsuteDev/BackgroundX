@@ -20,6 +20,8 @@
 
     const identifier = "bkx";
 
+    Object.fromEntries(new URLSearchParams(window.location.search).entries()).popup && document.querySelector("html").setAttribute("popup", true);
+
     // save & load
 
     let isLoading = false;

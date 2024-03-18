@@ -14,6 +14,8 @@ body:
         * This is actually a bug and not a feature.
         * You are running the latest version.
 
+        **Page refreshes are required for any options change; this extension doesn't support live changes.**
+
   - type: input
     attributes:
       label: Operating System

@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
 
-    "name": "BackgroundX",
+    "name": "Backgrounds for VSCode and Codespaces",
     "author": "Katsute",
     "description": "Background image extension for VSCode web and GitHub Codespaces",
     "version": "1.0",
@@ -20,10 +20,14 @@
         }
     },
 
+    "action": {
+        "default_popup": "options.html?popup=true"
+    },
     "options_ui": {
         "page": "options.html",
         "open_in_tab": false
     },
+
     "permissions": [
         "storage"
     ],

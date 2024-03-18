@@ -41,6 +41,36 @@
 <a href="https://addons.mozilla.org/firefox/addon/backgroundx"><img alt="Mozilla Add-on" valign="middle" src="https://img.shields.io/amo/v/backgroundx?label=%20&style=flat-square&color=FF7139"></a>
 -->
 
+### Features
+
+#### Multiple Backgrounds
+
+Add background images for the whole window, editors, sidebars, or the panel.
+
+<div align="center">
+    <h6>Full Window</h6>
+    <img alt="window background" src="https://raw.githubusercontent.com/KatsuteDev/BackgroundX/main/assets/window.png">
+    <br>
+    <h6>Editor, Sidebar, and Terminal</h6>
+    <img alt="editor background" src="https://raw.githubusercontent.com/KatsuteDev/BackgroundX/main/assets/editor.png">
+</div>
+
+#### Animated Backgrounds
+
+GIF image support.
+
+<div align="center">
+    <img alt="animated background" src="https://raw.githubusercontent.com/KatsuteDev/BackgroundX/main/assets/animated.gif">
+</div>
+
+#### Transition
+
+Transition between multiple background images.
+
+<div align="center">
+    <img alt="transition background" src="https://raw.githubusercontent.com/KatsuteDev/BackgroundX/main/assets/transition.gif">
+</div>
+
 ## &nbsp;
 
 This extension is released under the [GNU General Public License (GPL) v2.0](https://github.com/KatsuteDev/BackgroundX/blob/main/LICENSE).
