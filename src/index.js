@@ -30,7 +30,7 @@
             e.appendChild(document.createTextNode(css));
         }
         return e;
-    }
+    };
 
     const round = (number, places) => Math.round((number + Number.EPSILON) * Math.pow(10, places)) / Math.pow(10, places);
 
@@ -50,10 +50,10 @@
     body.setAttribute(`${identifier}-wA`, wA);
     body.setAttribute(`${identifier}-si`, si);
 
-    const wT = options.windowTimer || 0;
-    const eT = options.editorTimer || 0;
-    const sT = options.sidebarTimer || 0;
-    const pT = options.panelTimer || 0;
+    const wT = options.windowTime || 0;
+    const eT = options.editorTime || 0;
+    const sT = options.sidebarTime || 0;
+    const pT = options.panelTime || 0;
 
     const wI = [...(options.windowBackgrounds || [])];
     const eI = [...(options.editorBackgrounds || [])];
@@ -143,7 +143,7 @@
             const j = Math.floor(Math.random() * i);
             [arr[i], arr[j]] = [arr[j], arr[i]];
         }
-    }
+    };
 
     const wIE = createCSS(`${identifier}-w`);
     const eIE = createCSS(`${identifier}-e`);
@@ -238,7 +238,7 @@
 
     const head = document.querySelector("head");
 
-    const user = createCSS(`${identifier}-user`, "TODO");
+    const user = createCSS(`${identifier}-user`, options.css);
 
     head.appendChild(user);
     head.appendChild(global);
