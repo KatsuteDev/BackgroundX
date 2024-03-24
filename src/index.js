@@ -28,9 +28,9 @@
         e.setAttribute("type", "text/css");
         if(css){
             e.appendChild(document.createTextNode(css));
-        };
+        }
         return e;
-    };
+    }
 
     const round = (number, places) => Math.round((number + Number.EPSILON) * Math.pow(10, places)) / Math.pow(10, places);
 
@@ -142,36 +142,97 @@
         for(let i = arr.length - 1; i > 0; i--){
             const j = Math.floor(Math.random() * i);
             [arr[i], arr[j]] = [arr[j], arr[i]];
-        };
-    };
-
-    const set = (element, image, indexes, selectors) => {
-        while(element.firstChild){
-            element.removeChild(element.firstChild);
-        };
-
-        if(image.length > 0){
-            shuffle(indexes);
-
-            element.appendChild(document.createTextNode(`
-                ${selectors.join(',')} {
-
-                    background-image: url(${image[indexes[0]]});
-
-                }
-            `));
         }
-    };
+    }
 
     const wIE = createCSS(`${identifier}-w`);
     const eIE = createCSS(`${identifier}-e`);
     const sIE = createCSS(`${identifier}-s`);
     const pIE = createCSS(`${identifier}-p`);
 
-    const setW = () => set(wIE, wI, wC, wS);
-    const setE = () => set(eIE, eI, eC, eS);
-    const setS = () => set(sIE, sI, sC, sS);
-    const setP = () => set(pIE, pI, pC, pS);
+    const setW = () => {
+        while(wIE.firstChild){
+            wIE.removeChild(wIE.firstChild);
+        }
+
+        if(wI.length > 0){
+            shuffle(wC);
+
+            wIE.appendChild(document.createTextNode(`
+                ${wS.join(',')} {
+
+                    background-image: url("${wI[wC[0]].replace(/"/g, `\\"`)}");
+
+                }
+            `));
+        }
+    };
+
+    const setE = () => {
+        while(eIE.firstChild){
+            eIE.removeChild(eIE.firstChild);
+        }
+
+        if(eI.length > 0){
+            const len = Math.min(eI.length, 10);
+
+            shuffle(eC);
+
+            let buf = '';
+            for(let i = 0; i < len; i++){
+                buf += `
+                    .part.editor :not(.split-view-container) .split-view-container > .split-view-view:nth-child(${len}n+${i+1}) > .editor-group-container::after {
+
+                        background-image: url("${eI[eC[i]].replace(/"/g, `\\"`)}");
+
+                    }
+                `;
+            };
+
+            eIE.appendChild(document.createTextNode(buf));
+        }
+    };
+
+    const setS = () => {
+        while(sIE.firstChild){
+            sIE.removeChild(sIE.firstChild);
+        }
+
+        if(sI.length > 0){
+            shuffle(sC);
+
+            sIE.appendChild(document.createTextNode(`
+                .split-view-view > .part.sidebar::after {
+
+                    background-image: url("${sI[sC[0]].replace(/"/g, `\\"`)}");
+
+                }
+                .split-view-view > .part.auxiliarybar::after {
+
+                    background-image: url("${(sI[sC[1]] ?? sI[sC[0]]).replace(/"/g, `\\"`)}");
+
+                }
+            `));
+        }
+    };
+
+    const setP = () => {
+        while(pIE.firstChild){
+            pIE.removeChild(pIE.firstChild);
+        }
+
+        if(pI.length > 0){
+            shuffle(pC);
+
+            pIE.appendChild(document.createTextNode(`
+                ${pS.join(',')} {
+
+                    background-image: url(${pI[pC[0]].replace(/"/g, `\\"`)});
+
+                }
+            `));
+        }
+    };
 
     // install
 
@@ -188,7 +249,7 @@
 
     for(const arr of [wC, eC, sC, pC]){
         shuffle(arr);
-    };
+    }
 
     for(const [timer, attribute, images, apply] of [
         [wT, `${identifier}-wT`, wI, setW],
