@@ -20,9 +20,6 @@
         }
     },
 
-    "action": {
-        "default_popup": "options.html?popup=true"
-    },
     "options_ui": {
         "page": "options.html",
         "open_in_tab": false

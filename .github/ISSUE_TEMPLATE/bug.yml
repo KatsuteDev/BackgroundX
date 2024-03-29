@@ -14,8 +14,6 @@ body:
         * This is actually a bug and not a feature.
         * You are running the latest version.
 
-        **Page refreshes are required for any options change; this extension doesn't support live changes.**
-
   - type: input
     attributes:
       label: Operating System
@@ -25,6 +23,16 @@ body:
   - type: input
     attributes:
       label: Browser
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: IDE
+      options:
+        - github.dev (<kbd>.</kbd> editor)
+        - Codespaces
+        - vscode.dev
     validations:
       required: true
 

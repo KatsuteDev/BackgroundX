@@ -36,19 +36,9 @@
 
 }
 
-@media not screen and (width: 400px) {
+html {
 
-    html:not([popup]) {
-
-        min-width: 500px;
-
-    }
-
-}
-
-html[popup]{
-
-    width: 400px;
+    min-width: 500px;
 
 }
 

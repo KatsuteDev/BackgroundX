@@ -66,7 +66,7 @@
     const pC = [...Array(pI.length).keys()];
 
     const wS = [
-        `body${!wA ? "::before" : " > div[role='application'] > div.monaco-grid-view::after"}`
+        `body${!wA ? "::before" : " div[role='application'] > div.monaco-grid-view::after"}`
     ];
     const eS = [
         `.split-view-view > .editor-group-container::after`
@@ -227,7 +227,7 @@
             pIE.appendChild(document.createTextNode(`
                 ${pS.join(',')} {
 
-                    background-image: url(${pI[pC[0]].replace(/"/g, `\\"`)});
+                    background-image: url("${pI[pC[0]].replace(/"/g, `\\"`)}");
 
                 }
             `));

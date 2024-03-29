@@ -1,7 +1,7 @@
 /* Copyright (C) 2024 Katsute <https://github.com/Katsute> */
 
 body[bkx-wT="true"][bkx-wA="false"]::before,
-body[bkx-wT="true"][bkx-wA="true"] > div[role="application"] > div.monaco-grid-view::after,
+body[bkx-wT="true"][bkx-wA="true"] div[role="application"] > div.monaco-grid-view::after,
 body[bkx-eT="true"] .split-view-view > .editor-group-container::after,
 body[bkx-sT="true"] .split-view-view > .part.sidebar::after,
 body[bkx-sT="true"] .split-view-view > .part.auxiliarybar::after,
@@ -12,7 +12,7 @@ body[bkx-pT="true"] .split-view-view > .part.panel::after {
 }
 
 body[bkx-wA="false"]::before,
-body[bkx-wA="true"] > div[role="application"] > div.monaco-grid-view::after,
+body[bkx-wA="true"] div[role="application"] > div.monaco-grid-view::after,
 .split-view-view > .editor-group-container::after,
 .split-view-view > .part.sidebar::after,
 .split-view-view > .part.auxiliarybar::after,
@@ -33,18 +33,22 @@ body[bkx-wA="true"] > div[role="application"] > div.monaco-grid-view::after,
 
 }
 
-body[bkx-wA="false"]::before {
+body[bkx-wA="false"]::before,
+body[bkx-wA="false"] .split-view-view > .editor-group-container::after,
+body[bkx-wA="false"] .split-view-view > .part.sidebar::after,
+body[bkx-wA="false"] .split-view-view > .part.auxiliarybar::after,
+body[bkx-wA="false"] .split-view-view > .part.panel::after {
 
     z-index: 1000;
 
 }
 
-body[bkx-si="true"][bkx-wA="false"]::before,
-body[bkx-si="true"][bkx-wA="true"] > div[role="application"] > div.monaco-grid-view::after,
-body[bkx-si="true"] .split-view-view > .editor-group-container::after,
-body[bkx-si="true"] .split-view-view > .part.sidebar::after,
-body[bkx-si="true"] .split-view-view > .part.auxiliarybar::after,
-body[bkx-si="true"] .split-view-view > .part.panel::after {
+body[bkx-si="false"][bkx-wA="false"]::before,
+body[bkx-si="false"][bkx-wA="true"] div[role="application"] > div.monaco-grid-view::after,
+body[bkx-si="false"] .split-view-view > .editor-group-container::after,
+body[bkx-si="false"] .split-view-view > .part.sidebar::after,
+body[bkx-si="false"] .split-view-view > .part.auxiliarybar::after,
+body[bkx-si="false"] .split-view-view > .part.panel::after {
 
     image-rendering: pixelated;
 

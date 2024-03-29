@@ -20,8 +20,6 @@
 
     const identifier = "bkx";
 
-    Object.fromEntries(new URLSearchParams(window.location.search).entries()).popup && document.querySelector("html").setAttribute("popup", true);
-
     // save & load
 
     let isLoading = false;
@@ -128,13 +126,6 @@
         await (chrome ?? browser).storage.sync.set(options);
     };
 
-    const reset = async () => {
-        console.info("Resetting options");
-        chrome.storage.sync.clear()
-            .then(() => save({}))
-            .then(() => load({}));
-    };
-
     // change observer
 
     const saveOptions = () => {
@@ -185,7 +176,8 @@
             reader.onload = (c) => {
                 const content = c.target.result;
                 const options = JSON.parse(content);
-                save(options).then(() => load(options));
+                load(options);
+                saveOptions();
             };
             reader.readAsText(e.target.files[0], "UTF-8");
         };
