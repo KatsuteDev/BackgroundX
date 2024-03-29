@@ -30,8 +30,8 @@ body:
     attributes:
       label: IDE
       options:
-        - github.dev (<kbd>.</kbd> editor)
         - Codespaces
+        - github.dev
         - vscode.dev
     validations:
       required: true

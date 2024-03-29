@@ -48,13 +48,13 @@
                     input.addEventListener("focusout", () => {
                         if(container.lastChild !== row && input.value.trim().length === 0){
                             container.removeChild(row);
-                        };
+                        }
                     });
                     input.addEventListener("keyup", () => {
                         image.src = input.value;
                         if(container.lastChild === row && input.value.trim().length > 0){
                             add('');
-                        };
+                        }
                     });
 
                     const image = document.createElement("img");
@@ -78,13 +78,13 @@
 
                 while(container.firstChild){
                     container.removeChild(container.lastChild);
-                };
+                }
 
                 if(options[`${type}Backgrounds`]){
                     for(const image of options[`${type}Backgrounds`]){
                         add(image);
-                    };
-                };
+                    }
+                }
 
                 add('');
 
@@ -92,7 +92,7 @@
                     "Position": "center center",
                     "PositionManual": "50%",
                     "Repeat": "no-repeat",
-                    "Size": "auto",
+                    "Size": "cover",
                     "SizeManual": "100%",
                     "Opacity": "0.9",
                     "Blur": "0",
@@ -101,8 +101,8 @@
 
                 for(const [option, def] of Object.entries(defaults)){
                     document.querySelector(`#${identifier}-${type}${option}`).value = options[`${type}${option}`] ?? def;
-                };
-            };
+                }
+            }
 
             document.querySelector(`#${identifier}-renderContentAboveBackground`).checked = options.renderContentAboveBackground ?? false;
             document.querySelector(`#${identifier}-smoothImageRendering`).checked = options.smoothImageRendering ?? false;
@@ -112,10 +112,10 @@
             for(const option of document.querySelectorAll("option[value='custom']")){
                 const input = option.parentElement;
                 input.nextElementSibling.disabled = input.value !== "custom";
-            };
+            }
         }finally{
             isLoading = false;
-        };
+        }
     };
 
     const save = async (options) => {
@@ -141,46 +141,49 @@
                 for(const input of document.querySelectorAll(`#${identifier}-${type}Backgrounds input`)){
                     if(input.value.trim()){
                         buf.push(input.value.trim());
-                    };
-                };
+                    }
+                }
 
                 options[`${type}Backgrounds`] = buf;
 
-                for(const option of ["Position", "PositionManual", "Repeat", "Size", "Opacity", "Blur", "Time"]){
+                for(const option of ["Position", "PositionManual", "Repeat", "Size", "SizeManual", "Opacity", "Blur", "Time"]){
                     options[`${type}${option}`] = document.querySelector(`#${identifier}-${type}${option}`).value;
-                };
-            };
+                }
+            }
 
             save(options);
-        };
+        }
     };
 
     for(const input of document.querySelectorAll(["input", "select", "textarea"])){
         input.addEventListener("change", saveOptions);
-    };
+    }
 
     for(const option of document.querySelectorAll("option[value='custom']")){
         const input = option.parentElement;
         input.addEventListener("change", () => {
             input.nextElementSibling.disabled = input.value !== "custom";
         });
-    };
+    }
 
     // import & export
 
     document.querySelector(`#${identifier}-import`).addEventListener("click", () => document.querySelector(`#${identifier}-import-container`).click());
 
     document.querySelector(`#${identifier}-import-container`).addEventListener("change", (e) => {
-        if(e.target.files.length === 1){
+        if(e.target.files.length === 1){;
             const reader = new FileReader();
             reader.onload = (c) => {
                 const content = c.target.result;
                 const options = JSON.parse(content);
                 load(options);
                 saveOptions();
+                e.target.value = null;
             };
             reader.readAsText(e.target.files[0], "UTF-8");
-        };
+        }else{
+            e.target.value = null;
+        }
     });
 
     document.querySelector(`#${identifier}-export`).addEventListener("click", async () => {

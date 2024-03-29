@@ -85,36 +85,36 @@
         [
             wI,
             wS,
-            options.windowPosition || "center center",
+            options.windowPosition === "custom" ? options.windowPositionManual : options.windowPosition || "center center",
             options.windowRepeat || "no-repeat",
-            options.windowSize || "cover",
+            options.windowSize === "custom" ? options.windowSizeManual : options.windowSize || "cover",
             options.windowOpacity || 0.9,
             options.windowBlur || 0
         ],
         [
             eI,
             eS,
-            options.editorPosition || "center center",
+            options.editorPosition === "custom" ? options.editorPositionManual : options.editorPosition || "center center",
             options.editorRepeat || "no-repeat",
-            options.editorSize || "cover",
+            options.editorSize === "custom" ? options.editorSizeManual : options.editorSize || "cover",
             options.editorOpacity || 0.9,
             options.editorBlur || 0
         ],
         [
             sI,
             sS,
-            options.sidebarPosition || "center center",
+            options.sidebarPosition === "custom" ? options.sidebarPositionManual : options.sidebarPosition || "center center",
             options.sidebarRepeat || "no-repeat",
-            options.sidebarSize || "cover",
+            options.sidebarSize === "custom" ? options.sidebarSizeManual : options.sidebarSize || "cover",
             options.sidebarOpacity || 0.9,
             options.sidebarBlur || 0
         ],
         [
             pI,
             pS,
-            options.panelPosition || "center center",
+            options.panelPosition === "custom" ? options.panelPositionManual : options.panelPosition || "center center",
             options.panelRepeat || "no-repeat",
-            options.panelSize || "cover",
+            options.panelSize === "custom" ? options.panelSizeManual : options.panelSize || "cover",
             options.panelOpacity || 0.9,
             options.panelBlur || 0
         ],
@@ -187,7 +187,7 @@
 
                     }
                 `;
-            };
+            }
 
             eIE.appendChild(document.createTextNode(buf));
         }
