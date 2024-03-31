@@ -20,7 +20,7 @@
 
     const identifier = "bkx";
 
-    document.querySelector("html").setAttribute("firefox", browser.runtime.getBrowserInfo !== undefined);
+    document.querySelector("html").setAttribute("firefox", typeof browser !== "undefined" && browser?.runtime?.getBrowserInfo !== undefined);
 
     // save & load
 
