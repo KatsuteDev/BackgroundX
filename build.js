@@ -34,6 +34,7 @@ const ext  = path.join(__dirname, "extension.zip");
 }
 
 /* copy src to zip */ {
+    fs.copyFileSync("LICENSE", path.join(dist, "LICENSE.txt"));
     for(const file of fs.readdirSync(src))
         fs.copyFileSync(path.join(src, file), path.join(dist, file));
 }

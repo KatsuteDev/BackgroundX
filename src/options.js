@@ -177,10 +177,15 @@
             const reader = new FileReader();
             reader.onload = (c) => {
                 const content = c.target.result;
-                const options = JSON.parse(content);
-                load(options);
-                saveOptions();
-                e.target.value = null;
+                try{
+                    const options = JSON.parse(content);
+                    load(options);
+                    saveOptions();
+                }catch(error){
+                    console.warn(error);
+                }finally{
+                    e.target.value = null;
+                }
             };
             reader.readAsText(e.target.files[0], "UTF-8");
         }else{
@@ -197,7 +202,7 @@
     });
 
     document.querySelector(`#${identifier}-report`).addEventListener("click", async () => {
-        window.open(`https://github.com/KatsuteDev/BackgroundX/issues/new?template=bug.yml&settings=${encodeURI("```json\n" + JSON.stringify(await (chrome ?? browser).storage.sync.get() ?? {}, null, 4) + "\n```")}`);
+        window.open(`https://github.com/KatsuteDev/BackgroundX/issues/new?template=bug.yml&settings=${encodeURIComponent("```json\n" + JSON.stringify(await (chrome ?? browser).storage.sync.get() ?? {}, null, 4) + "\n```")}`);
     });
 
     load(await (chrome ?? browser).storage.sync.get() ?? {});

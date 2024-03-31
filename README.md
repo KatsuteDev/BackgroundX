@@ -8,12 +8,8 @@
         <a href="https://github.com/KatsuteDev/BackgroundX/issues">Report an Issue</a>
         •
         <a href="https://chrome.google.com/webstore/detail/epccdadnbacalhpbidajgjcpjinepioe">Chrome Extension</a>
-        <!--
         •
         <a href="https://addons.mozilla.org/firefox/addon/backgroundx">Mozilla Add-on</a>
-        -->
-    <br><br>
-        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons License"></a>
     <br><br>
         <a href="https://chrome.google.com/webstore/detail/backgroundx/epccdadnbacalhpbidajgjcpjinepioe"><img src="https://img.shields.io/chrome-web-store/stars/epccdadnbacalhpbidajgjcpjinepioe?style=for-the-badge&logo=google-chrome&logoColor=FFFFFF&label=Rating&labelColor=202020&color=4285F4" alt="Chrome Web Store Rating"></a>
         <a href="https://chrome.google.com/webstore/detail/epccdadnbacalhpbidajgjcpjinepioe"><img src="https://img.shields.io/chrome-web-store/users/epccdadnbacalhpbidajgjcpjinepioe?style=for-the-badge&logo=google-chrome&logoColor=FFFFFF&label=Installs&labelColor=202020&color=4285F4" alt="Chrome Web Store Users"></a>

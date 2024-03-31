@@ -14,6 +14,8 @@ body:
         * This is actually a bug and not a feature.
         * You are running the latest version.
 
+        **If you are on Firefox and the addon does nothing, check the Permissions tab to make sure it's enabled.**
+
   - type: input
     attributes:
       label: Operating System
