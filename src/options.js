@@ -20,6 +20,8 @@
 
     const identifier = "bkx";
 
+    document.querySelector("html").setAttribute("firefox", browser.runtime.getBrowserInfo !== undefined);
+
     // save & load
 
     let isLoading = false;
@@ -171,7 +173,7 @@
     document.querySelector(`#${identifier}-import`).addEventListener("click", () => document.querySelector(`#${identifier}-import-container`).click());
 
     document.querySelector(`#${identifier}-import-container`).addEventListener("change", (e) => {
-        if(e.target.files.length === 1){;
+        if(e.target.files.length === 1){
             const reader = new FileReader();
             reader.onload = (c) => {
                 const content = c.target.result;

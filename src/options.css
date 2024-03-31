@@ -42,6 +42,20 @@ html {
 
 }
 
+html:not([firefox="true"]) #firefox-notice {
+
+    display: none;
+
+}
+
+#firefox-notice {
+
+    padding: .5rem;
+
+    border-color: #FF0048;
+
+}
+
 body {
 
     margin: 0;
