@@ -4,7 +4,7 @@
     "name": "Backgrounds for VSCode and Codespaces",
     "author": "Katsute",
     "description": "Background image extension for VSCode web and GitHub Codespaces",
-    "version": "1.0",
+    "version": "1.1",
     "homepage_url": "https://github.com/KatsuteDev/BackgroundX",
     "icons": {
         "16": "icon16.png",
