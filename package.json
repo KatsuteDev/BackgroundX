@@ -16,6 +16,6 @@
     },
     "homepage": "https://github.com/KatsuteDev/BackgroundX#readme",
     "devDependencies": {
-        "adm-zip": "0.5.13"
+        "adm-zip": "0.5.14"
     }
 }
