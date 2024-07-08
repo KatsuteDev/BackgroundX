@@ -3,7 +3,8 @@
     "scripts": {
         "start": "npm run build",
         "build": "node build.js",
-        "prepare": "npm run build"
+        "prepare": "npm run build",
+        "test": "node test.js"
     },
     "repository": {
         "type": "git",
@@ -16,6 +17,7 @@
     },
     "homepage": "https://github.com/KatsuteDev/BackgroundX#readme",
     "devDependencies": {
-        "adm-zip": "0.5.14"
+        "adm-zip": "0.5.14",
+        "puppeteer": "22.12.1"
     }
 }
