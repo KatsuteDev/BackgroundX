@@ -17,7 +17,7 @@ const puppeteer = require("puppeteer");
         }catch(e){
             return false;
         }
-    }
+    };
 
     // selectors
 
@@ -40,7 +40,7 @@ const puppeteer = require("puppeteer");
             console.error('❌', s);
             failed = true;
         }
-    };
+    }
 
     // post
 
