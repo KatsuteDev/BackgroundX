@@ -1,0 +1,21 @@
+name: Feature Request
+description: Suggest a new feature
+labels: [feature request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is for the Background browser extension, if you are using the VSCode desktop extension open an issue [here](https://github.com/KatsuteDev/Background/issues/new/choose). <br><br>
+
+  - type: markdown
+    attributes:
+      value: |
+        This extension is maintenance only and is no longer accepting feature requests.
+
+  - type: textarea
+    attributes:
+      label: N/A
+      description: |-
+        N/A
+    validations:
+      required: false
