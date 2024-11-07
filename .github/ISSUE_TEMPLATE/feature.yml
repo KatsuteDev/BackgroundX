@@ -9,6 +9,6 @@ body:
 
   - type: textarea
     attributes:
-      label:  
+      label: .
     validations:
       required: false
